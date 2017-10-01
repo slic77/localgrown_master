@@ -1,6 +1,6 @@
 
 # Please note we are using Docker Compose version 3
-version: '3'
+#version: '3'
 services:
     # Configuration for our seed cassandra node. The node is call DC1LGCN1
     # .i.e Node 1 in Data center 1.

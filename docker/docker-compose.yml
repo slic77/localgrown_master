@@ -1,6 +1,6 @@
 
 # Please note we are using Docker Compose version 3
-#version: '3'
+version: '3'
 services:
     # Configuration for our seed cassandra node. The node is call DC1LGCN1
     # .i.e Node 1 in Data center 1.
@@ -149,5 +149,14 @@ services:
         # using http://localhost:10001
         ports:
             - "10001:9000"
+
+    lgc-mqtt:
+        image: eclipse-mosquitto
+        networks:
+          - dc1ring
+    lgc-webapi:
+        image: nginx
+        networks:
+          - dc1ring
 networks:
     dc1ring:

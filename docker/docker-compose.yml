@@ -30,6 +30,8 @@ services:
         environment:
             - CASSANDRA_CLUSTER_NAME=dev_cluster
             - CASSANDRA_SEEDS=DC1LGCN1
+            - CASSANDRA_START_RPC=true
+            - CASSANDRA_RPC_ADDRESS=0.0.0.0
         # Exposing ports for inter cluster communication
         expose:
             - 7000
@@ -37,6 +39,8 @@ services:
             - 7199
             - 9042
             - 9160
+        ports:
+            - "9042:9042"
         # Cassandra ulimt recommended settings
         ulimits:
             memlock: -1

@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from cassandra import ConsistencyLevel
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'django_cassandra_engine',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -80,6 +82,24 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
+    'cassandra': {
+        'ENGINE': 'django_cassandra_engine',
+        'NAME': 'dev_cluster',
+        'TEST_NAME': 'test_db',
+        'HOST': 'localhost',
+        'OPTIONS': {
+            'replication': {
+                'strategy_class': 'SimpleStrategy',
+                'replication_factor': 1
+            },
+            'connection': {
+                'consistency': ConsistencyLevel.LOCAL_ONE,
+                'retry_connect': True,
+                'port': 9042
+                # + All connection options for cassandra.cluster.Cluster()
+            },
+        }
     }
 }
 

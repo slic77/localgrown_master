@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'lgc_wep_api.apps.LgcWepApiConfig',
     'rest_framework',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

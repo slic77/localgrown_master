@@ -7,11 +7,10 @@ class UsersSerializer(serializers.Serializer):
     name = serializers.CharField()
     city = serializers.CharField()
     state = serializers.CharField()
-    # fields = ('id', 'name', 'city', 'state')
 
     def create(self, validated_data):
         """
-        Create and return a new `Snippet` instance, given the validated data.
+        Create and return a new `User` instance, given the validated data.
         """
         return Users.objects.create(**validated_data)
 

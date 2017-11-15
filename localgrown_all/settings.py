@@ -85,7 +85,7 @@ DATABASES = {
     },
     'cassandra': {
         'ENGINE': 'django_cassandra_engine',
-        'NAME': 'dev_cluster',
+        'NAME': 'lgc',
         'TEST_NAME': 'test_db',
         'HOST': 'localhost',
         'OPTIONS': {

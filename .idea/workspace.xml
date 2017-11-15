@@ -85,7 +85,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/n2data/data/system/size_estimates-618f817b005f3678b8a453f3930b8e86/mc-41-big-Digest.crc32" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docker/n3data/commitlog/CommitLog-6-1510701577368.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lgc_wep_api/urls.py" afterPath="$PROJECT_DIR$/lgc_wep_api/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lgc_wep_api/views.py" afterPath="$PROJECT_DIR$/lgc_wep_api/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,10 +117,10 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lgc_wep_api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#1#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -397,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510722117037</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="While going through the django REST tutorial I have made the code more DRY (Don't Repeat Yourself) and used Class views.">
+      <created>1510766270127</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1510766270127</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -468,7 +474,8 @@
     <MESSAGE value="Numerous changes around setting up the docker environment to work from the localhost INTO the cassandra container." />
     <MESSAGE value="Updated the lgc_wep_api.models, urls, and views to reflect appropriate changes to get the users and serialize them. Also added the lgc_wep_api.serializers file. updated the settings.py to reflect the correct cassandra keyspace." />
     <MESSAGE value="Corrected the lgc_wep_api.urls, and views comments. Also updated code to allow for more flexibility in querying the list of all users (users_list) and added in the user_detail api by primary key. Note that when querying at this point the dashes must be removed from the UUID. The POST also works now." />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected the lgc_wep_api.urls, and views comments. Also updated code to allow for more flexibility in querying the list of all users (users_list) and added in the user_detail api by primary key. Note that when querying at this point the dashes must be removed from the UUID. The POST also works now." />
+    <MESSAGE value="While going through the django REST tutorial I have made the code more DRY (Don't Repeat Yourself) and used Class views." />
+    <option name="LAST_COMMIT_MESSAGE" value="While going through the django REST tutorial I have made the code more DRY (Don't Repeat Yourself) and used Class views." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -499,7 +506,7 @@
         <state relative-caret-position="450">
           <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#1#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -876,10 +883,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lgc_wep_api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#1#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

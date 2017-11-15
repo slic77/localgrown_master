@@ -8,26 +8,22 @@ from lgc_wep_api.serializers import UsersSerializer
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework import status, permissions
+from rest_framework.views import APIView
+from django.http import Http404
 
 
-# Create your views here.
-def index(request):
-    return HttpResponse("Hello World. You're at the web api index")
-
-
-@api_view(['GET', 'POST'])
 @permission_classes((permissions.AllowAny,))
-def users_list(request, format=None):
+class UserList(APIView):
     """
-    List all users, or create a new user.
+    List all users, or create a new user
     """
-    if request.method == 'GET':
+
+    def get(self, request, format=None):
         users = Users.objects.all()
         serializer = UsersSerializer(users, many=True)
         return Response(serializer.data)
 
-    elif request.method == 'POST':
-        # data = JSONParser().parse(request)
+    def post(self, request, format=None):
         serializer = UsersSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -35,28 +31,32 @@ def users_list(request, format=None):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
 @permission_classes((permissions.AllowAny,))
-def user_detail(request, pk, format=None):
+class UserDetail(APIView):
     """
-    Retrieve, update or delete a user.
+    Retreive, update, or delete a user
     """
-    try:
-        user = Users.objects.get(pk=pk)
-    except Users.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
 
-    if request.method == 'GET':
+    def get_object(self, pk):
+        try:
+            return Users.objects.get(pk=pk)
+        except Users.DoesNotExist:
+            raise Http404
+
+    def get(self, request, pk, format=None):
+        user = self.get_object(pk)
         serializer = UsersSerializer(user)
         return Response(serializer.data)
 
-    elif request.method == 'PUT':
+    def put(self, request, pk, format=None):
+        user = self.get_object(pk)
         serializer = UsersSerializer(user, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    elif request.method == 'DELETE':
+    def delete(self, request, pk, format=None):
+        user = self.get_object(pk)
         user.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

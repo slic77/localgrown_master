@@ -117,11 +117,9 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lgc_wep_api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-              <folding>
-                <element signature="e#1#37#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -403,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510766270127</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Wow. Following the django REST framework tutorial. Really cleaned up the code. Looks nice and DRY.">
+      <created>1510767069856</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1510767069856</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -475,7 +480,8 @@
     <MESSAGE value="Updated the lgc_wep_api.models, urls, and views to reflect appropriate changes to get the users and serialize them. Also added the lgc_wep_api.serializers file. updated the settings.py to reflect the correct cassandra keyspace." />
     <MESSAGE value="Corrected the lgc_wep_api.urls, and views comments. Also updated code to allow for more flexibility in querying the list of all users (users_list) and added in the user_detail api by primary key. Note that when querying at this point the dashes must be removed from the UUID. The POST also works now." />
     <MESSAGE value="While going through the django REST tutorial I have made the code more DRY (Don't Repeat Yourself) and used Class views." />
-    <option name="LAST_COMMIT_MESSAGE" value="While going through the django REST tutorial I have made the code more DRY (Don't Repeat Yourself) and used Class views." />
+    <MESSAGE value="Wow. Following the django REST framework tutorial. Really cleaned up the code. Looks nice and DRY." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wow. Following the django REST framework tutorial. Really cleaned up the code. Looks nice and DRY." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -505,9 +511,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-          <folding>
-            <element signature="e#1#37#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -883,11 +887,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lgc_wep_api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="e#1#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="51" lean-forward="false" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
